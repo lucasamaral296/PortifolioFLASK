@@ -1,2 +1,4 @@
-email: 'contatolucasvelasque64@gmail.com'
-senha: 'Lucasv@64'
+
+
+email = "contatolucasvelasque64@gmail.com"
+senha = "wborxmysbsblprmp"

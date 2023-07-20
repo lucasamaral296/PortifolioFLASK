@@ -20,8 +20,8 @@ mail = Mail(app)
 
 class Contato:
     def __init__(self, nome, email, mensagem):
-        self.nome = nome,
-        self.email = email,
+        self.nome = nome
+        self.email = email
         self.mensagem = mensagem
 
 
@@ -40,16 +40,16 @@ def send():
         
         msg = Message(
             subject = f'{formContato.nome} te enviou uma mensagem no portifólio',
-            sender = app.config.get("MAIL_USERNAME")
-            recipients = ['lucasamaral@velasque@outlook.com', app.config.get("MAIL_USERNAME")],
-            body = f'''
+            sender = app.config.get("MAIL_USERNAME"),
+            recipients = ['lucasamaral_velasque@outlook.com', app.config.get("MAIL_USERNAME")],
+            body = f"""
             
             {formContato.nome} com o e-mail {formContato.email}, te enviou a seguinte
             mensagem:
             
             {formContato.mensagem}
             
-            '''
+            """
         )
         mail.send(msg)
         flash('Mensagem enviada com Sucesso!')
